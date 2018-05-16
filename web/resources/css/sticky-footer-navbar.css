@@ -1,0 +1,97 @@
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  background-color: lightblue;
+  margin-bottom: 60px;
+}
+
+.reponsive {
+	margin-bottom: 100px;
+	margin-top: 100px;
+}
+
+section {
+	width:100%; 
+	float:left;
+}
+.banner-section {
+	background-image:url("http://imagens.ebc.com.br/mfvxwsxherBK9EcSkhwp-tHUeEA=/1100x370/smart/http://www.ebc.com.br/sites/_portalebc2014/files/atoms_image/30-07-2014-megasena-foto-rafael-neddermeyer-fotos-publicas-5-1024x702.jpg");
+	background-size:cover; 
+	height: 380px; 
+	left: 0; 
+	position: absolute; 
+	top: 0; 
+	background-position:0;
+}
+.post-title-block {
+	padding:100px 0;
+}
+.post-title-block h1 {
+	color: #fff; 
+	font-size: 85px; 
+	font-weight: bold; 
+	text-transform: capitalize;
+}
+.post-title-block li {
+	font-size:20px; 
+	color: #fff;
+}
+.image-block {
+	float:left; 
+	width:100%; 
+	margin-bottom:10px;
+	display: block;
+    margin-left: 100px;
+    margin-right: 100px;
+	
+}
+/* Tela Main do Jogador  */
+
+.tablejogador {
+	border:0;
+	background-color: #EEEEEE; 
+	border: 80px solid #CCCCCC;
+	
+}
+
+
+
+footer{
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  position: fixed;
+  width: 100%;
+  background-color: #f5f5f5;
+  text-align: center;
+  margin-top: -50px;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body > .container {
+  padding: 60px 15px 0;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+
+
