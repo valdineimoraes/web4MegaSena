@@ -46,6 +46,8 @@
 								</div>
 							</div>
 						</div>
+						
+						<input type="hidden" name="role" value="user" />
 
 						<div class="form-group ">
 							<button type="submit" class="btn btn-primary btn-lg btn-block login-button">Register</button>

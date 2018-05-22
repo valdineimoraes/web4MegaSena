@@ -12,14 +12,14 @@
 		        </div>
 		        	<h1 class="text-center"><p> </p>
 		        	<p>
-		        	<small class="text-center"> Not Found </small>
+		        	<small class="text-center"> Aconteceu um erro ao acessar o sistema. </small>
 		        	</p>
 		        	</h1>
 		        	
 		        	<p class="text-center">
 		        		<a class="btn btn-primary" href="index.jsp">
 		        			<i class="fa fa-home"></i> 
-		        			Home
+		        			Voltar
 		        		</a>
 		        	</p>
 		    </div>

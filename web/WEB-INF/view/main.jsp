@@ -35,7 +35,7 @@
 						  <input name="n6" type="text" id="n6" size="3" maxlength="2" required="required">
 						 </p>                <br>
 						 <p align="center">
-						  <button type="submit">Gerar Aposta</button>
+						  <button class="button buttonAposta btn btn-primary" type="submit">Gerar Aposta</button>
 						 </p>
 						 
 		              </form>

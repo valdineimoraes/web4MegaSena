@@ -36,10 +36,12 @@ public class ResultListServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		String date = request.getParameter("dateBet");
 		ResultDTO dto = (ResultDTO) request.getAttribute("resultado");
 		
 		String address = "/WEB-INF/view/result.jsp";
 		request.setAttribute("resultado", dto);
+		request.setAttribute("dateBet", date); 
 		request.getRequestDispatcher(address).forward(request, response);
 		
 		//doGet(request, response);

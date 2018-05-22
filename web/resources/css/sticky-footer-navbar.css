@@ -23,11 +23,13 @@ section {
 .banner-section {
 	background-image:url("http://imagens.ebc.com.br/mfvxwsxherBK9EcSkhwp-tHUeEA=/1100x370/smart/http://www.ebc.com.br/sites/_portalebc2014/files/atoms_image/30-07-2014-megasena-foto-rafael-neddermeyer-fotos-publicas-5-1024x702.jpg");
 	background-size:cover; 
-	height: 380px; 
+	height: 380px;
+	width: 100%; 
 	left: 0; 
 	position: absolute; 
 	top: 0; 
 	background-position:0;
+	
 }
 .post-title-block {
 	padding:100px 0;
@@ -58,6 +60,35 @@ section {
 	background-color: #EEEEEE; 
 	border: 80px solid #CCCCCC;
 	
+}
+
+.button {
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	cursor: pointer;
+}
+.buttonAposta {
+	box-shadow: 0 8px 16px 0 rgba(0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+
+/* Tela Resultado da Mega Sena  */
+
+.tabMega {
+	width:100%;
+	border:0;
+	border: 1px solid #CCCCCC;
+}
+
+
+table.tabMegaResult{
+	border:0;
+	align: center;
 }
 
 

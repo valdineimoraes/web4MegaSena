@@ -19,10 +19,10 @@ import br.edu.utfpr.dto.ResultDTO;
 /**
  * Servlet implementation class ResultServlet
  */
-@WebServlet("/u/resultMega")
+@WebServlet(urlPatterns = {"/u/resultMega"}, name = "ResultServlet")
 public class ResultServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static List<Integer> apostaMega = new ArrayList<>();
+	private static List<Integer> apostaMega;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
@@ -65,6 +65,7 @@ public class ResultServlet extends HttpServlet {
 			throws ServletException, IOException {
 		//TODO ler os números apostados pelo usuário
 		
+		apostaMega = new ArrayList<>();
 		
 		
 		apostaMega.add(Integer.parseInt(request.getParameter("n1").trim()));
@@ -73,6 +74,7 @@ public class ResultServlet extends HttpServlet {
 		apostaMega.add(Integer.parseInt(request.getParameter("n4").trim()));
 		apostaMega.add(Integer.parseInt(request.getParameter("n5").trim()));
 		apostaMega.add(Integer.parseInt(request.getParameter("n6").trim()));
+		Collections.sort(apostaMega);
 		
 		
 		
@@ -86,7 +88,7 @@ public class ResultServlet extends HttpServlet {
 		//TODO envia para o jsp apresentar os resultados
 		ResultDTO dto = new ResultDTO(acertos, frase, apostaMega, cartaoGerado);
 		String address = "/u/resultList";
-		request.setAttribute("resultado", dto);
+		request.setAttribute("resultado", dto);		
 		request.getRequestDispatcher(address).forward(request, response);
 		
 	}
@@ -133,9 +135,9 @@ public class ResultServlet extends HttpServlet {
 	            case 6:
 	                return("Parabens voce ganhou a Mega Sena, voce teve "+contador+" acertos!");	                
 	            case 5:
-	            	return("Parabens voce ganhor a Quina, voce teve "+contador+" acertos!");	                
+	            	return("Parabens voce ganhou a Quina, voce teve "+contador+" acertos!");	                
 	            case 4:
-	            	return("Parabens voce ganhor a Quadra, voce teve "+contador+" acertos!");	                
+	            	return("Parabens voce ganhou a Quadra, voce teve "+contador+" acertos!");	                
 	            default:
 	                return("Infelizmente voce nao ganhou nada, tente novamente...., voce teve "+contador+" acerto!");
 

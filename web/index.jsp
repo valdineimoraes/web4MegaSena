@@ -5,7 +5,7 @@
 <t:template>
 	<jsp:body>
 	
-	<section class="banner-section" >
+	<section class="banner-section responsive" >
 		
 	</section>
 	<section class="post-content-section">

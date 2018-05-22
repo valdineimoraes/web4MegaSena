@@ -37,16 +37,16 @@
 	
     <div class="row">     
         <div class="col-sm-6 col-md-4 col-md-offset-4">
-            <h2 class="text-center "> Para realizar sua aposta é necessário fazer seu login!</h2>
+            <h2 class="text-center "> Faça seu login!</h2>
             <div class="account-wall">
                 <img class="profile-img"
 							src="https://www.revenueriver.co/hs-fs/hub/177047/file-2110622193-png/user_profile_img.png?t=1521835851784"
 							alt="">
                 <form action="j_security_check" class="form-signin">
                 <input type="text" name="j_username"
-								class="form-control" placeholder="Email" required autofocus>
+								class="form-control" placeholder="Email or User"  autofocus>
                 <input type="password" name="j_password"
-								class="form-control" placeholder="Senha" required>
+								class="form-control" placeholder="Senha" >
                 <button class="btn btn-lg btn-primary btn-block"
 								type="submit"> Login </button>
                 
