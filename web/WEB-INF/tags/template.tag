@@ -57,6 +57,7 @@
 									<li><a href="logout">Logout</a></li>
 								</ul>
 							</li>
+							<li><a href="u/main">Ultima Aposta: ${param.dataBet}</a></li>
 							</c:when>
 							
 							<c:otherwise>

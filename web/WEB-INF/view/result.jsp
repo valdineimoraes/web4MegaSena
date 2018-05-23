@@ -20,8 +20,6 @@
 			<tr>
               <td style="background-color: #CCCCCC">
               <strong>Resultado da sua Aposta na Mega Sena</strong>
-              Data: ${dateBet} 
-              Data JSTL: ${param.dateBet} 
               </td>
             </tr>
             
@@ -32,6 +30,7 @@
 				<table class="tabMegaResult">
                   <tbody>
 					<tr>
+						<p>Data: ${dateBet} </p>
 						<p>Numeros Sorteados</p>
 						<c:forEach var="resultMega" items="${resultado.cartaoSorteado}">
 							<td width="45" height="45" style="background-image:url(resources/img/megaball.gif); 

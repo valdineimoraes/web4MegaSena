@@ -16,6 +16,17 @@
       <form-error-page>/error.jsp</form-error-page>
     </form-login-config>
   </login-config>
+  <error-page>
+    <error-code>404</error-code>
+    <location>/WEB-INF/view/not-found.jsp</location>
+  </error-page>
+  <error-page>
+    <exception-type>java.lang.NullPointerException</exception-type>
+    <location>/WEB-INF/view/null.jsp</location>
+  </error-page>
+  <error-page>
+    <location>/error-handler</location>
+  </error-page>  
   <security-role>
     <role-name>user</role-name>
   </security-role>

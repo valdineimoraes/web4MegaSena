@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import br.edu.utfpr.model.RoleBean;
 import br.edu.utfpr.model.UserBean;
 import br.edu.utfpr.util.Sha;
 
@@ -47,6 +48,8 @@ public class RegisterServlet extends HttpServlet {
 		String name = request.getParameter("name");
 		String login = request.getParameter("login");
 		String pwd = request.getParameter("pwd");
+		String role = request.getParameter("role");
+		
 		try {
 			pwd = Sha.hash256(pwd);
 		} catch (NoSuchAlgorithmException e) {
@@ -56,18 +59,15 @@ public class RegisterServlet extends HttpServlet {
 		try {
 			UserBean user = new UserBean(name, login, pwd);
 			user.save();
+			
+			RoleBean userRole = new RoleBean(role, login);
+			userRole.save(user);
 		
 			response.sendRedirect(request.getContextPath() + "/u/main");
 		} catch (Exception e) {
 			response.sendRedirect(request.getContextPath() + "/errorbanco.jsp");
 		}
 		
-		/**UserBean user = new UserBean(name, login, pwd);
-		
-		
-		user.save();
-		
-		response.sendRedirect(request.getContextPath() + "/login.jsp");*/
 	}
 
 

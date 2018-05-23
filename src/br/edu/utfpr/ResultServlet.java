@@ -92,12 +92,12 @@ public class ResultServlet extends HttpServlet {
 		request.getRequestDispatcher(address).forward(request, response);
 		
 	}
-
+	
 	public static List<Integer> gerarSorteioMegaSena() {
 
 		List<Integer> numeros = new ArrayList<>();
 
-		for (int i = 1; i <=10; i++) {
+		for (int i = 1; i <=60; i++) {
 			numeros.add(i);
 		}
 		Collections.shuffle(numeros);

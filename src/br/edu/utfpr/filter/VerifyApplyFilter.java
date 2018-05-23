@@ -23,16 +23,16 @@ import javax.servlet.http.HttpSession;
 /**
  * Servlet Filter implementation class CounterFilter
  */
-@WebFilter(filterName = "DateBetFilter", dispatcherTypes = {
+@WebFilter(filterName = "VerifyApplyFilter", dispatcherTypes = {
 				DispatcherType.REQUEST 				
 		}
 					, servletNames = { "ResultServlet" })
-public class DateBetFilter implements Filter {
+public class VerifyApplyFilter implements Filter {
 
     /**
      * Default constructor. 
      */
-    public DateBetFilter() {
+    public VerifyApplyFilter() {
         // TODO Auto-generated constructor stub
     }
 
@@ -48,29 +48,11 @@ public class DateBetFilter implements Filter {
 	 */
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 		
-		class MyWrapper extends HttpServletRequestWrapper{
-			
-			public MyWrapper(HttpServletRequest req) {
-				super(req);
-			}
-			
-			@Override
-			public String getParameter(String name) {
-				if(name.equals("dateBet")) {
-					Date now = new Date();
-					String formatted = new SimpleDateFormat("dd/MM/yy hh:mm:ss").format(now);
-					return formatted;
-				}
-				else {
-					return super.getParameter(name);
-				}
-								
-			}
-		}
 		
-		//System.out.println("*****************************************jshjdshfkjdsfhkjdsfhkjds");
+		
+	
 		// pass the request along the filter chain
-		chain.doFilter(new MyWrapper((HttpServletRequest)request), response);
+		chain.doFilter(request, response);
 	}
 
 	/**
