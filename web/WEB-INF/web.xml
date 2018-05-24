@@ -13,12 +13,20 @@
     <auth-method>FORM</auth-method>
     <form-login-config>
       <form-login-page>/WEB-INF/view/login.jsp</form-login-page>
-      <form-error-page>/error.jsp</form-error-page>
+      <form-error-page>/WEB-INF/view/error.jsp</form-error-page>
     </form-login-config>
   </login-config>
   <error-page>
     <error-code>404</error-code>
     <location>/WEB-INF/view/not-found.jsp</location>
+  </error-page>
+  <error-page>
+    <error-code>400</error-code>
+    <location>/WEB-INF/view/bad-request.jsp</location>
+  </error-page>
+  <error-page>
+    <error-code>403</error-code>
+    <location>/WEB-INF/view/acess-denied.jsp</location>
   </error-page>
   <error-page>
     <exception-type>java.lang.NullPointerException</exception-type>
@@ -41,16 +49,6 @@
     </web-resource-collection>
     <auth-constraint>
       <role-name>user</role-name>
-      <role-name>admin</role-name>
-    </auth-constraint>
-  </security-constraint>
-  <security-constraint>
-    <display-name>Segurança para o diretório de administradores</display-name>
-    <web-resource-collection>
-      <web-resource-name>Somente Administradores</web-resource-name>
-      <url-pattern>/admin/*</url-pattern>
-    </web-resource-collection>
-    <auth-constraint>
       <role-name>admin</role-name>
     </auth-constraint>
   </security-constraint>

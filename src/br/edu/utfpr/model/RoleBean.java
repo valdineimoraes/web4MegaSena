@@ -6,13 +6,6 @@ import br.edu.utfpr.model.sql.RoleSQLDAO;
 public class RoleBean {
 	private String login;
 	private String role;
-	
-	public RoleBean() {
-		// TODO Auto-generated constructor stub
-	}
-	
-	
-	
 
 	public RoleBean(String login, String role) {
 		super();
@@ -50,8 +43,8 @@ public class RoleBean {
 				dao.delete(this);
 			}
 			
-			public static RoleBean find(String email) {
-				return dao.find(email);
+			public static RoleBean find(String login) {
+				return dao.find(login);
 			}
 
 

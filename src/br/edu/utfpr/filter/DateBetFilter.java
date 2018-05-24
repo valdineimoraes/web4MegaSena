@@ -58,7 +58,7 @@ public class DateBetFilter implements Filter {
 			public String getParameter(String name) {
 				if(name.equals("dateBet")) {
 					Date now = new Date();
-					String formatted = new SimpleDateFormat("dd/MM/yy hh:mm:ss").format(now);
+					String formatted = new SimpleDateFormat("dd/MM/yy HH:mm:ss").format(now);
 					return formatted;
 				}
 				else {
