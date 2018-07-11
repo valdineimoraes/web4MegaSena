@@ -47,6 +47,7 @@ public class CookieFilter implements Filter {
 			
 		
 		Principal principal = req.getUserPrincipal();
+		
 		if(principal != null) {
 			boolean createNewCookie = true;
 			Cookie[] cookies = req.getCookies();

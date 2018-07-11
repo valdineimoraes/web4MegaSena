@@ -57,6 +57,7 @@ public class RegisterServlet extends HttpServlet {
 		}
 		
 		try {
+			
 			UserBean user = new UserBean(name, login, pwd);
 			user.save();
 			
@@ -64,6 +65,7 @@ public class RegisterServlet extends HttpServlet {
 			userRole.save(user);
 		
 			response.sendRedirect(request.getContextPath() + "/u/main");
+			
 		} catch (Exception e) {
 			response.sendRedirect(request.getContextPath() + "/errorbanco.jsp");
 		}
